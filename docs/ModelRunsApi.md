@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**register_model_run_complete_model_run_register_complete_post**](ModelRunsApi.md#register_model_run_complete_model_run_register_complete_post) | **POST** /model_run/register_complete | Register Model Run Complete
+[**register_complete_model_run**](ModelRunsApi.md#register_complete_model_run) | **POST** /model_run/register_complete | Register Model Run Complete
 
 
-# **register_model_run_complete_model_run_register_complete_post**
-> RegisterModelRunResponse register_model_run_complete_model_run_register_complete_post(model_run_record)
+# **register_complete_model_run**
+> RegisterModelRunResponse register_complete_model_run(model_run_record)
 
 Register Model Run Complete
 
@@ -88,10 +88,10 @@ with rrap_mds_is_prov_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Register Model Run Complete
-        api_response = api_instance.register_model_run_complete_model_run_register_complete_post(model_run_record)
+        api_response = api_instance.register_complete_model_run(model_run_record)
         pprint(api_response)
     except rrap_mds_is_prov_api.ApiException as e:
-        print("Exception when calling ModelRunsApi->register_model_run_complete_model_run_register_complete_post: %s\n" % e)
+        print("Exception when calling ModelRunsApi->register_complete_model_run: %s\n" % e)
 ```
 
 

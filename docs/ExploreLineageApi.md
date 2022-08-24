@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**explore_downstream_explore_downstream_get**](ExploreLineageApi.md#explore_downstream_explore_downstream_get) | **GET** /explore/downstream | Explore Downstream
-[**explore_upstream_explore_upstream_get**](ExploreLineageApi.md#explore_upstream_explore_upstream_get) | **GET** /explore/upstream | Explore Upstream
+[**explore_downstream**](ExploreLineageApi.md#explore_downstream) | **GET** /explore/downstream | Explore Downstream
+[**explore_upstream**](ExploreLineageApi.md#explore_upstream) | **GET** /explore/upstream | Explore Upstream
 
 
-# **explore_downstream_explore_downstream_get**
-> LineageResponse explore_downstream_explore_downstream_get(starting_id)
+# **explore_downstream**
+> LineageResponse explore_downstream(starting_id)
 
 Explore Downstream
 
@@ -53,19 +53,19 @@ with rrap_mds_is_prov_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Explore Downstream
-        api_response = api_instance.explore_downstream_explore_downstream_get(starting_id)
+        api_response = api_instance.explore_downstream(starting_id)
         pprint(api_response)
     except rrap_mds_is_prov_api.ApiException as e:
-        print("Exception when calling ExploreLineageApi->explore_downstream_explore_downstream_get: %s\n" % e)
+        print("Exception when calling ExploreLineageApi->explore_downstream: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Explore Downstream
-        api_response = api_instance.explore_downstream_explore_downstream_get(starting_id, depth=depth)
+        api_response = api_instance.explore_downstream(starting_id, depth=depth)
         pprint(api_response)
     except rrap_mds_is_prov_api.ApiException as e:
-        print("Exception when calling ExploreLineageApi->explore_downstream_explore_downstream_get: %s\n" % e)
+        print("Exception when calling ExploreLineageApi->explore_downstream: %s\n" % e)
 ```
 
 
@@ -99,8 +99,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **explore_upstream_explore_upstream_get**
-> LineageResponse explore_upstream_explore_upstream_get(starting_id)
+# **explore_upstream**
+> LineageResponse explore_upstream(starting_id)
 
 Explore Upstream
 
@@ -144,19 +144,19 @@ with rrap_mds_is_prov_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Explore Upstream
-        api_response = api_instance.explore_upstream_explore_upstream_get(starting_id)
+        api_response = api_instance.explore_upstream(starting_id)
         pprint(api_response)
     except rrap_mds_is_prov_api.ApiException as e:
-        print("Exception when calling ExploreLineageApi->explore_upstream_explore_upstream_get: %s\n" % e)
+        print("Exception when calling ExploreLineageApi->explore_upstream: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Explore Upstream
-        api_response = api_instance.explore_upstream_explore_upstream_get(starting_id, depth=depth)
+        api_response = api_instance.explore_upstream(starting_id, depth=depth)
         pprint(api_response)
     except rrap_mds_is_prov_api.ApiException as e:
-        print("Exception when calling ExploreLineageApi->explore_upstream_explore_upstream_get: %s\n" % e)
+        print("Exception when calling ExploreLineageApi->explore_upstream: %s\n" % e)
 ```
 
 

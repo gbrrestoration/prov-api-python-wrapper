@@ -36,14 +36,14 @@ class ExploreLineageApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
-        self.explore_downstream_explore_downstream_get_endpoint = _Endpoint(
+        self.explore_downstream_endpoint = _Endpoint(
             settings={
                 'response_type': (LineageResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/explore/downstream',
-                'operation_id': 'explore_downstream_explore_downstream_get',
+                'operation_id': 'explore_downstream',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -92,14 +92,14 @@ class ExploreLineageApi(object):
             },
             api_client=api_client
         )
-        self.explore_upstream_explore_upstream_get_endpoint = _Endpoint(
+        self.explore_upstream_endpoint = _Endpoint(
             settings={
                 'response_type': (LineageResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/explore/upstream',
-                'operation_id': 'explore_upstream_explore_upstream_get',
+                'operation_id': 'explore_upstream',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -149,7 +149,7 @@ class ExploreLineageApi(object):
             api_client=api_client
         )
 
-    def explore_downstream_explore_downstream_get(
+    def explore_downstream(
         self,
         starting_id,
         **kwargs
@@ -160,7 +160,7 @@ class ExploreLineageApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.explore_downstream_explore_downstream_get(starting_id, async_req=True)
+        >>> thread = api.explore_downstream(starting_id, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -231,9 +231,9 @@ class ExploreLineageApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['starting_id'] = \
             starting_id
-        return self.explore_downstream_explore_downstream_get_endpoint.call_with_http_info(**kwargs)
+        return self.explore_downstream_endpoint.call_with_http_info(**kwargs)
 
-    def explore_upstream_explore_upstream_get(
+    def explore_upstream(
         self,
         starting_id,
         **kwargs
@@ -244,7 +244,7 @@ class ExploreLineageApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.explore_upstream_explore_upstream_get(starting_id, async_req=True)
+        >>> thread = api.explore_upstream(starting_id, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -315,5 +315,5 @@ class ExploreLineageApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['starting_id'] = \
             starting_id
-        return self.explore_upstream_explore_upstream_get_endpoint.call_with_http_info(**kwargs)
+        return self.explore_upstream_endpoint.call_with_http_info(**kwargs)
 

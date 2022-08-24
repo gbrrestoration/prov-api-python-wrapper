@@ -23,8 +23,8 @@ class TestModelRunsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_register_model_run_complete_model_run_register_complete_post(self):
-        """Test case for register_model_run_complete_model_run_register_complete_post
+    def test_register_complete_model_run(self):
+        """Test case for register_complete_model_run
 
         Register Model Run Complete  # noqa: E501
         """
