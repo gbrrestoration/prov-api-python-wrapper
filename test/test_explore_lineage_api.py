@@ -23,15 +23,15 @@ class TestExploreLineageApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_explore_downstream_explore_downstream_get(self):
-        """Test case for explore_downstream_explore_downstream_get
+    def test_explore_downstream(self):
+        """Test case for explore_downstream
 
         Explore Downstream  # noqa: E501
         """
         pass
 
-    def test_explore_upstream_explore_upstream_get(self):
-        """Test case for explore_upstream_explore_upstream_get
+    def test_explore_upstream(self):
+        """Test case for explore_upstream
 
         Explore Upstream  # noqa: E501
         """

@@ -76,10 +76,10 @@ with rrap_mds_is_prov_api.ApiClient(configuration) as api_client:
 
     try:
         # Check Admin Access
-        api_response = api_instance.check_admin_access_check_access_check_admin_access_get()
+        api_response = api_instance.check_admin_access()
         pprint(api_response)
     except rrap_mds_is_prov_api.ApiException as e:
-        print("Exception when calling AccessCheckApi->check_admin_access_check_access_check_admin_access_get: %s\n" % e)
+        print("Exception when calling AccessCheckApi->check_admin_access: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -88,14 +88,14 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccessCheckApi* | [**check_admin_access_check_access_check_admin_access_get**](docs/AccessCheckApi.md#check_admin_access_check_access_check_admin_access_get) | **GET** /check-access/check-admin-access | Check Admin Access
-*AccessCheckApi* | [**check_general_access_check_access_check_general_access_get**](docs/AccessCheckApi.md#check_general_access_check_access_check_general_access_get) | **GET** /check-access/check-general-access | Check General Access
-*AccessCheckApi* | [**check_read_access_check_access_check_read_access_get**](docs/AccessCheckApi.md#check_read_access_check_access_check_read_access_get) | **GET** /check-access/check-read-access | Check Read Access
-*AccessCheckApi* | [**check_write_access_check_access_check_write_access_get**](docs/AccessCheckApi.md#check_write_access_check_access_check_write_access_get) | **GET** /check-access/check-write-access | Check Write Access
-*ExploreLineageApi* | [**explore_downstream_explore_downstream_get**](docs/ExploreLineageApi.md#explore_downstream_explore_downstream_get) | **GET** /explore/downstream | Explore Downstream
-*ExploreLineageApi* | [**explore_upstream_explore_upstream_get**](docs/ExploreLineageApi.md#explore_upstream_explore_upstream_get) | **GET** /explore/upstream | Explore Upstream
-*ModelRunsApi* | [**register_model_run_complete_model_run_register_complete_post**](docs/ModelRunsApi.md#register_model_run_complete_model_run_register_complete_post) | **POST** /model_run/register_complete | Register Model Run Complete
-*DefaultApi* | [**root_get**](docs/DefaultApi.md#root_get) | **GET** / | Root
+*AccessCheckApi* | [**check_admin_access**](docs/AccessCheckApi.md#check_admin_access) | **GET** /check-access/check-admin-access | Check Admin Access
+*AccessCheckApi* | [**check_general_access**](docs/AccessCheckApi.md#check_general_access) | **GET** /check-access/check-general-access | Check General Access
+*AccessCheckApi* | [**check_read_access**](docs/AccessCheckApi.md#check_read_access) | **GET** /check-access/check-read-access | Check Read Access
+*AccessCheckApi* | [**check_write_access**](docs/AccessCheckApi.md#check_write_access) | **GET** /check-access/check-write-access | Check Write Access
+*ExploreLineageApi* | [**explore_downstream**](docs/ExploreLineageApi.md#explore_downstream) | **GET** /explore/downstream | Explore Downstream
+*ExploreLineageApi* | [**explore_upstream**](docs/ExploreLineageApi.md#explore_upstream) | **GET** /explore/upstream | Explore Upstream
+*ModelRunsApi* | [**register_complete_model_run**](docs/ModelRunsApi.md#register_complete_model_run) | **POST** /model_run/register_complete | Register Model Run Complete
+*DefaultApi* | [**root**](docs/DefaultApi.md#root) | **GET** / | Root
 
 
 ## Documentation For Models

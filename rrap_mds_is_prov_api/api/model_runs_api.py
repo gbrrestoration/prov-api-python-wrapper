@@ -37,14 +37,14 @@ class ModelRunsApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
-        self.register_model_run_complete_model_run_register_complete_post_endpoint = _Endpoint(
+        self.register_complete_model_run_endpoint = _Endpoint(
             settings={
                 'response_type': (RegisterModelRunResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/model_run/register_complete',
-                'operation_id': 'register_model_run_complete_model_run_register_complete_post',
+                'operation_id': 'register_complete_model_run',
                 'http_method': 'POST',
                 'servers': None,
             },
@@ -90,7 +90,7 @@ class ModelRunsApi(object):
             api_client=api_client
         )
 
-    def register_model_run_complete_model_run_register_complete_post(
+    def register_complete_model_run(
         self,
         model_run_record,
         **kwargs
@@ -101,7 +101,7 @@ class ModelRunsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.register_model_run_complete_model_run_register_complete_post(model_run_record, async_req=True)
+        >>> thread = api.register_complete_model_run(model_run_record, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -171,5 +171,5 @@ class ModelRunsApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['model_run_record'] = \
             model_run_record
-        return self.register_model_run_complete_model_run_register_complete_post_endpoint.call_with_http_info(**kwargs)
+        return self.register_complete_model_run_endpoint.call_with_http_info(**kwargs)
 
